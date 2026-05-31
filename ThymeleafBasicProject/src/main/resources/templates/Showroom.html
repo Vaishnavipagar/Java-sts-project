@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Success Showroom</title>
+</head>
+<body>
+ <h2 align="center">Welcome to Cyber Success Showroom</h2>
+ <h4>Kindly choose your preffered Car from the table</h4>
+     <table>
+           <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>BRAND</th>
+              <th>COLOUR</th>
+              <th>PRICE</th>
+             </tr>
+             <tr th:each="car:${allCars}">
+                 <td th:text="${car.id}"></td>
+                 <td th:text="${car.name}"></td>
+                 <td th:text="${car.brand}"></td>
+                 <td th:text="${car.colour}"></td>
+                 <td th:text="${car.price}"></td>
+             
+             
+             
+             
+             </tr>
+ 
+    </table>
+
+</body>
+</html>

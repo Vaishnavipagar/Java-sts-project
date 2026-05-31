@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Favourite Songs</title>
+</head>
+<body> 
+      <h2 align="center">Welcome to Song Collection</h2>
+      <h4>Kindly choose your preferred Song from the table</h4>
+      <table>
+      <tr>
+      <th>ID</th>
+        <th>NAME</th>
+        <th>MOVIE</th>
+        <th>SINGER</th>
+        </tr>
+        <tr th:each="song : ${allSongs}">
+        <td th:text="${song.id}"></td>
+        <td th:text="${song.name}"></td>
+        <td th:text="${song.movie}"></td>
+        <td th:text="${song.singer}"></td>
+    </tr>
+        
+      </table>
+
+</body>
+</html>
